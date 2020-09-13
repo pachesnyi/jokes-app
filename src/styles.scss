@@ -1,0 +1,40 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~src/variables';
+/* You can add global styles to this file, and also import other style files */
+
+$font-family-basic: "Lato", sans-serif;
+
+body {
+  font-family: $font-family-basic;
+}
+
+// Reset
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+app-jokes-list-item + app-jokes-list-item { margin-top: 1rem; }
+
+body {
+  &.dark-theme {
+    background: #121212;
+    color: #fff;
+  }
+}
+
+.dark-theme {
+  .btn-primary {
+    //background-color: $accent-color-dark;
+    //border-color: $accent-color-dark;
+  }
+}
+
+html .dark-theme {
+  .pagination-custom__button--controls {
+    background-color: adjust_hue(rgba($accent-color, .32), -10);
+    border-color: adjust_hue(rgba($accent-color, .32), -10);
+    color: #fff;
+  }
+
+}

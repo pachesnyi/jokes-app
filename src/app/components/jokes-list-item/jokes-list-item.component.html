@@ -1,0 +1,2 @@
+<p *ngIf="joke" class="joke__text">{{joke.jokeText}}</p>
+<button *ngIf="!hideButton" class="btn btn-sm btn-primary" [routerLink]="[joke.id]">Details</button>

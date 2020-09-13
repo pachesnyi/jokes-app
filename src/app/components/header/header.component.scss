@@ -1,0 +1,23 @@
+@import '~src/variables';
+:host {
+  width: 100%;
+  display: block;
+  background: $accent-color;
+  padding: 15px 0;
+  color: var(--white);
+  .dark-theme & {
+    background: $accent-color-dark;
+  }
+}
+
+.logo {
+  color: var(--white);
+  display: inline-block;
+  //max-width: 150px;
+  &__img {
+    max-width: 100%;
+  }
+  &__text {
+    fill: currentColor;
+  }
+}

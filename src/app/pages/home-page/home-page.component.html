@@ -1,0 +1,4 @@
+<app-jokes-list
+  [jokes$]="jokesStream$"
+></app-jokes-list>
+<app-custom-pagination *ngIf="jokesStream$ | async"></app-custom-pagination>

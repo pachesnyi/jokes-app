@@ -1,0 +1,4 @@
+<app-jokes-list-item
+  *ngFor="let jokeData of currentItems$ | async"
+  [joke]="jokeData"
+></app-jokes-list-item>

@@ -1,0 +1,24 @@
+@import '~src/variables';
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.2rem;
+  background-color: adjust_hue(rgba($accent-color, .12), -10);
+  border: 1px solid adjust_hue(rgba($accent-color, .12), -10);
+
+  box-shadow: 1px 1px 10px rgba(black, 0.1);
+  .dark-theme & {
+    background-color: rgba(#fff, .9);
+    border: 1px solid rgba(#fff, .9);
+    color: black;
+  }
+}
+
+.joke__text {
+  margin-bottom: 0;
+  padding-right: 30px;
+}

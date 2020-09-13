@@ -1,0 +1,35 @@
+@import '~src/variables';
+:host {
+  display: block;
+}
+.button-theme-switcher {
+  background: #fff;
+  border-radius: 30px;
+  vertical-align: middle;
+  line-height: 1em;
+  box-shadow: 1px 1px 10px rgba(0,0,0, .2);
+  width: 65px;
+  height: 30px;
+  border: none;
+  position: relative;
+  transition: .33s all linear;
+  outline: none;
+  &:before {
+    content: '';
+    transition: inherit;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: block;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: adjust_hue(rgba($accent-color, .5), -10);
+  }
+  &.active {
+    &:before {
+      transform: translate(100%, -50%);
+    }
+  }
+}
