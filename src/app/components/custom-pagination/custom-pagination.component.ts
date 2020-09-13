@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PaginationService} from "../../services/pagination.service";
+import { PaginationService } from '../../services/pagination.service';
 
 @Component({
   selector: 'app-custom-pagination',
@@ -12,10 +12,11 @@ export class CustomPaginationComponent implements OnInit {
 
   constructor(
     private _paginationService: PaginationService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
-    this.pages = Array(this._paginationService.pagesAmountValue).fill(0).map((x,i)=> i);
+    this.pages = Array(this._paginationService.pagesAmountValue).fill(0).map((x, i) => i);
   }
 
   isActive(page) {
@@ -31,14 +32,14 @@ export class CustomPaginationComponent implements OnInit {
   }
 
   paginatePrev() {
-    if(!this.isFirstPage()) {
+    if (!this.isFirstPage()) {
       this._paginationService.currentPage$.next(this._paginationService.currentPage - 1);
       this.initItems();
     }
   }
 
   paginateNext() {
-    if(!this.isLastPage()) {
+    if (!this.isLastPage()) {
       this._paginationService.currentPage$.next(this._paginationService.currentPage + 1);
       this.initItems();
     }
@@ -53,10 +54,9 @@ export class CustomPaginationComponent implements OnInit {
   }
 
   handlePaginate(page) {
-    this.setCurrentPage(page);
+    this.setCurrentPage(page + 1);
     this.initItems();
   }
-
 
 
 }

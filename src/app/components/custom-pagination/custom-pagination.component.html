@@ -3,7 +3,7 @@
     <button class="pagination-custom__button pagination-custom__button--controls" [disabled]="isFirstPage()" (click)="paginatePrev()">Prev</button>
   </li>
   <li *ngFor="let pageNumber of pages" >
-    <button class="pagination-custom__button" [ngClass]="{'active' : isActive(pageNumber)}"  (click)="handlePaginate(pageNumber + 1)">{{pageNumber + 1}}</button>
+    <button class="pagination-custom__button" [ngClass]="{'active' : isActive(pageNumber)}"  (click)="handlePaginate(pageNumber)">{{pageNumber + 1}}</button>
   </li>
   <li>
     <button class="pagination-custom__button pagination-custom__button--controls" [disabled]="isLastPage()" (click)="paginateNext()">Next</button>
